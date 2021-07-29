@@ -32,3 +32,4 @@ public class Bear: PokedexItem {
         return "He will NOT roll!";
     }
 }
+//change
