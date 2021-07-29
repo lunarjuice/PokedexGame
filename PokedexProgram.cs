@@ -84,22 +84,22 @@ namespace PokedexTest
                         //A stranger approaches
             Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No");
             userResponse = Console.ReadLine();
-            if (userResponse == "Yes");
-            do {
-                // { pick randomPokemon }
-                var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)];
+            if (userResponse == "Yes") {
+                do {
+                    // { pick randomPokemon }
+                    var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)];
 
-                // { pick randomChallenmgerPokemon }
-                var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
+                    // { pick randomChallenmgerPokemon }
+                    var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
 
                 // { display table with both pokemon stats }
-                // for(s1; s2; s3) {
-                    //...........
-                // }
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
-            } while (userResponse == "Yes");
+                 } while (userResponse == "Yes");
+            }
+            else {Console.WriteLine("The stranger wishes you a good day and walks off.");
+            }
 
             Console.WriteLine("The stranger looks disappointed, but accepts your response...");
                     }
