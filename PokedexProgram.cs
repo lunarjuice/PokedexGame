@@ -80,6 +80,28 @@ namespace PokedexTest
                             userResponse = Console.ReadLine();
                         } while (userResponse == "Yes");
                         Console.WriteLine("Aw okay. Maybe another time then.");
+
+                        //A stranger approaches
+            Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No");
+            userResponse = Console.ReadLine();
+            if (userResponse == "Yes");
+            do {
+                // { pick randomPokemon }
+                var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)];
+
+                // { pick randomChallenmgerPokemon }
+                var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
+
+                // { display table with both pokemon stats }
+                // for(s1; s2; s3) {
+                    //...........
+                // }
+
+                Console.WriteLine("Would you like to compare another pokemon?");
+                userResponse = Console.ReadLine();
+            } while (userResponse == "Yes");
+
+            Console.WriteLine("The stranger looks disappointed, but accepts your response...");
                     }
                     else  { 
                         Console.WriteLine("I'm sorry I don't think that's a Pokedex.");
@@ -95,38 +117,17 @@ namespace PokedexTest
             else {
                 Console.WriteLine("You needed to enter Yes or No, the instructions were pretty simple...not sure how you messed that one up.");
             }
-
-            //A stranger approaches
-//how to fix this squiggly
-            Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No");
-            userResponse = Console.ReadLine();
-            do {
-                // { pick randomPokemon }
-                //var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)];
-
-                // { pick randomChallenmgerPokemon }
-                //var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
-
-                // { display table with both pokemon stats }
-                // for(s1; s2; s3) {
-                    //...........
-                // }
-
-                Console.WriteLine("Would you like to compare another pokemon?");
-                userResponse = Console.ReadLine();
-            } while (userResponse == "Yes");
-            Console.WriteLine("The stranger looks disappointed, but accepts your response...");
         }
     }  
 }
 
 
 //To Do List:
-// *Cristian* - add list 2 
-// *Makayla* change pokemon cookie cutter to ActualPokemon **********
-// *Makayla* - add object challenger pokedex 
-// *Makayla* - add to states: HP, Attack, Defense, Sp.Defense, Sp.Attack, Speed, abilities, type effectiveness agaisnt other pokemon (effective, notEffective) 
-// *Cristian* - give pokemon in list newly added states 
+// Done: *Cristian* - add list 2 
+// Done: *Makayla* change pokemon cookie cutter to ActualPokemon 
+// Done: *Makayla* - add object challenger pokedex 
+// Done: *Makayla* - add to states: HP, Attack, Defense, Sp.Defense, Sp.Attack, Speed, abilities, type effectiveness agaisnt other pokemon (effective, notEffective) 
+// Done: *Cristian* - give pokemon in list newly added states 
 // write code for random ch.pokemon
 // write code for random pokmeon
 // write out "text" for stats
