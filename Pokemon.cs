@@ -16,7 +16,7 @@ public class Pokemon: ActualPokemon {
     public string typeWeakness;
 
 
-    public Pokemon (string name, string avgSize, string color, string pokemonType, string region, int hp, int attack, int defense, int spDefense, int spAttack, int speed, string abilities, string typeEffectiveness, string typeWeakness): base(color) {
+    public Pokemon (string name, string avgSize, string color, string pokemonType, string region, int hp, int attack, int defense, int spDefense, int spAttack, int speed, string ability, string typeEffectiveness, string typeWeakness): base(ability, color) {
         this.name = name;
         this.avgSize = avgSize;
         this.pokemonType = pokemonType; 
