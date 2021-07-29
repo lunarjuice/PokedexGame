@@ -51,4 +51,3 @@ public class Pokemon: ActualPokemon {
 //bool run away
 //bool fight
 //bool 
-    //change
