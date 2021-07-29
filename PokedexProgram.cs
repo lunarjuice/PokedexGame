@@ -93,6 +93,7 @@ namespace PokedexTest
                     var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
 
                 // { display table with both pokemon stats }
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
