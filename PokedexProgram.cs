@@ -94,9 +94,9 @@ namespace PokedexTest
 
                 // { display table with both pokemon stats }
 
-                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "HP: " + ((Pokemon)randomPokemonItem).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomPokemonItem).attack);
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomPokemonItem).name + Environment.NewLine + "HP: " + ((Pokemon)randomPokemonItem).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomPokemonItem).attack);
 
-                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
+                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
