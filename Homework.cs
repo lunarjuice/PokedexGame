@@ -23,4 +23,3 @@ public class Homework: PokedexItem {
             return "This homework is still okay.";
         }
 }
-//change
