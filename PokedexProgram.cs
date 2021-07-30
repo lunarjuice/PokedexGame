@@ -104,7 +104,6 @@ namespace PokedexTest
             else {Console.WriteLine("The stranger wishes you a good day and walks off.");
             }
 
-            Console.WriteLine("The stranger looks disappointed, but accepts your response...");
                     }
                     else  { 
                         Console.WriteLine("I'm sorry I don't think that's a Pokedex.");
