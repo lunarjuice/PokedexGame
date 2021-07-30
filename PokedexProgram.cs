@@ -99,7 +99,7 @@ namespace PokedexTest
             if (userResponse == "Yes") {
                 do {
                     // { pick randomPokemon }
-                    var randomTempPokemon = foundPokedex.TempPokemon[rd.Next(0,13)];
+                    var randomTempPokemon = foundPokedex.TempPokemon[rd.Next(0,10)];
 
                     // { display table with both pokemon stats }
                 Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomTempPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomTempPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomTempPokemon).attack);
