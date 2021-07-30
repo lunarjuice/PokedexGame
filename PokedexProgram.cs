@@ -74,68 +74,75 @@ namespace PokedexTest
                     if (userResponse == Pokedex.Color) {
                         Console.WriteLine("Wow you found a pokedex! Would you like to hear about some pokemon?");
                         userResponse = Console.ReadLine();
-                        do {
-                            var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)]; //find random pokedexItem
-                            if (randomPokemonItem is Plant) {
-                                Console.WriteLine(((Plant)randomPokemonItem).Grows());
+                        //do {
+                        if(userResponse == "Yes") {
+                            while (userResponse == "Yes") {
+                                var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)]; //find random pokedexItem
+                                if (randomPokemonItem is Plant) {
+                                    Console.WriteLine(((Plant)randomPokemonItem).Grows());
+                                }
+                                else if (randomPokemonItem is Bear) {
+                                    Console.WriteLine(((Bear)randomPokemonItem).roll());
+                                }
+                                else if (randomPokemonItem is Homework) {
+                                    Console.WriteLine(((Homework)randomPokemonItem).getsCrumbled());
+                                }
+                                else if (randomPokemonItem is Pokemon) {
+                                    Console.WriteLine("You got it boss. Here's one, this is a " + ((Pokemon)randomPokemonItem).name + ". " + ((Pokemon)randomPokemonItem).name + " is " + ((Pokemon)randomPokemonItem).Color + ". They are usually " + ((Pokemon)randomPokemonItem).avgSize + ". " + ((Pokemon)randomPokemonItem).name + " is a " + ((Pokemon)randomPokemonItem).pokemonType + " type pokemon and can be found in the " + ((Pokemon)randomPokemonItem).region + " Region.");
+                                }
+                                Console.WriteLine("Would you like to hear about another pokemon?");
+                                userResponse = Console.ReadLine();
                             }
-                            else if (randomPokemonItem is Bear) {
-                                Console.WriteLine(((Bear)randomPokemonItem).roll());
-                            }
-                            else if (randomPokemonItem is Homework) {
-                                Console.WriteLine(((Homework)randomPokemonItem).getsCrumbled());
-                            }
-                            else if (randomPokemonItem is Pokemon) {
-                                Console.WriteLine("You got it boss. Here's one, this is a " + ((Pokemon)randomPokemonItem).name + ". " + ((Pokemon)randomPokemonItem).name + " is " + ((Pokemon)randomPokemonItem).Color + ". They are usually " + ((Pokemon)randomPokemonItem).avgSize + ". " + ((Pokemon)randomPokemonItem).name + " is a " + ((Pokemon)randomPokemonItem).pokemonType + " type pokemon and can be found in the " + ((Pokemon)randomPokemonItem).region + " Region.");
-                            }
-                            Console.WriteLine("Would you like to hear about another pokemon?");
-                            userResponse = Console.ReadLine();
-                        } while (userResponse == "Yes");
-                        Console.WriteLine("Aw okay. Maybe another time then.");
-//else Aw okay maybe another time
+                        }
+                        else {
+                             Console.WriteLine("Aw, okay. Maybe another time.");
+                         }
+                        //} while (userResponse == "Yes");
+                        //Console.WriteLine("Aw okay. Maybe another time then.");
 
                         //A stranger approaches
             Console.WriteLine("...A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
             userResponse = Console.ReadLine();
             if (userResponse == "Yes") {
-                do {
-                    // { pick randomPokemon }
-                    var randomTempPokemon = foundPokedex.TempPokemon[rd.Next(0,22)];
-                    // { pick randomChallenmgerPokemon }
+
+                while (userResponse == "Yes") {
+                    var randomTempPokemon = foundPokedex.TempPokemon[rd.Next(0,10)];
+
+                    // { display table with player's pokemon stats }
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomTempPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomTempPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomTempPokemon).attack);
+
                     var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
-//HEAD                // { display table with both pokemon stats }
-                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomTempPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomTempPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomTempPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomTempPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomTempPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomTempPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomTempPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomTempPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomTempPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomTempPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomTempPokemon).typeWeakness);
-
-                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomActualPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomActualPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomActualPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomActualPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomActualPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomActualPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomActualPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomActualPokemon).typeWeakness);
-
+                
+                    // { display table with challenger's pokemon stats }
+                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
-                 } while (userResponse == "Yes");
-//"The stranger looks disappointed, but they wish you a good day and walk off"
-
-            }
-            else {Console.WriteLine("The stranger wishes you a good day and walks off.");
-            }
                     }
-                    else  { 
-                        Console.WriteLine("I'm sorry I don't think that's a Pokedex.");
+                    Console.WriteLine("The stranger wishes you a good day and walks off.");
+            }
+            else {Console.WriteLine("The stranger looks disappointed, but they wish you a good day and walk off"); //The stranger wishes you a good day and walks off.
+            }
+                        //
+                    //what color is it?
+                    }  
+                    else {
+                      Console.WriteLine("I'm sorry I don't think that's a Pokedex.");
                     }
-                }  
-                else {
-                    Console.WriteLine("I'm sorry I don't think that's a Pokedex.");
+                //what shape is it?  
                 }
-            }
-            else if(userResponse == "No") {
-                Console.WriteLine("hmm...I don't think that's a pokedex. Better luck next time.");
-            }
+                else {
+                 Console.WriteLine("hmm...I don't think that's a pokedex. Better luck next time.");
+                }
+            } 
+            //will you pick it up?   
             else {
                 Console.WriteLine("You needed to enter Yes or No, the instructions were pretty simple...not sure how you messed that one up.");
-            }
+            } 
         }
-    }  
-}
 
+    }
+}
 
 //To Do List:
 // Done: *Cristian* - add list 2 
