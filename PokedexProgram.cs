@@ -94,7 +94,7 @@ namespace PokedexTest
                         Console.WriteLine("Aw okay. Maybe another time then.");
 
                         //A stranger approaches
-            Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
+            Console.WriteLine("...A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
             userResponse = Console.ReadLine();
             if (userResponse == "Yes") {
                 do {
