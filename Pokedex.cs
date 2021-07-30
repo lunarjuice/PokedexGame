@@ -7,6 +7,7 @@ public class Pokedex {
     const string color = "Red";
     bool screenIsLitUp;
     List<PokedexItem> pokemonsAndStuff = new List<PokedexItem>();
+    List<ActualPokemon> tempPokemon = new List<ActualPokemon>();
 
     public Pokedex(bool screenIsLitUp) {
         this.screenIsLitUp = screenIsLitUp;
@@ -20,7 +21,6 @@ public class Pokedex {
 //what is this? "List<Poke...etc.
 //The accessor for the private property above (Encapsulation)
     public List<PokedexItem> PokemonsAndStuff { get => pokemonsAndStuff; set => pokemonsAndStuff = value; }
-
-    
+    public List<ActualPokemon> TempPokemon { get => tempPokemon; set => tempPokemon = value; }
 }
 

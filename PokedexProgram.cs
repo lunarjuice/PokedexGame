@@ -23,6 +23,18 @@ namespace PokedexTest
             PokedexContents.Add(new Pokemon("Arbok", "large", "purple", "poison", "Kanto", 60, 95, 69, 79, 65, 80, "Intimidate", "grass & fairy", "poison, ground, rock, ghost, & steel"));
             PokedexContents.Add(new Pokemon("Deerling", "small", "pink & white with yellow accents", "normal & grass", "Unova", 60, 60, 50, 50, 40, 74, "Chlorophyll", "ground, rock, & water", "rock, ghost, steel, flying, poison, bug, fire, grass, & dragon")); //stop
 
+            List<ActualPokemon> TempPokemon = new List<ActualPokemon>();
+            PokedexContents.Add(new Pokemon("Pidgey", "small and chubby", "brown", "flying & normal", "Kanto & Johto, ", 40, 45, 40, 35, 35, 56, "Keen Eye", "bug and grass","eletcric, ice, and rock"));
+            PokedexContents.Add(new Pokemon("Ponyta", "small", "yellow", "fire", " Galar ",50,85,55,65,65,90,"Flash Fire","grass, ice, bug, steel and fairy","water, ground, and rock" ));
+            PokedexContents.Add(new Pokemon("Charmander", "small", "orange", "fire", "Kanto", 39,52,43,50,60,62,"Blaze","Grass, Ice, Bug, Steel, Fairy","Water,Ground,Rock"));
+            PokedexContents.Add(new Pokemon("Glameow", "small", "grey", "normal", "Sinnoh",49,55,42,37,42,85,"Own Tempo", "None","Fighting and Ghost" ));
+            PokedexContents.Add(new Pokemon("Rufflet", "small", "white & dark blue", "flying & normal", "Unova",70,83,50,50,37,60,"Sheer Force"," Bug and Grass ", "Electric, Ice, and Rock"));
+            PokedexContents.Add(new Pokemon("Onix", "humongous", "grey", "rock & ground", "Kanto",35,45,160,45,30,70,"Sturdy","Fire, Electric, Poison, Bug, Rock, Steel, Flying","Water, Grass, Fighting"));
+            PokedexContents.Add(new Pokemon("Mantine", "humongous", "blue & white", "water & flying", "Alola",85,40,70,140,80,70,"Swift Swim","Fire,Ground,Fighting,Rock,Bug,Grass","Electric"));
+            PokedexContents.Add(new Pokemon("Squritle", "small", "blue", "water", "Kanto", 44, 48, 65, 64, 50, 43, "Torrent", "ground, rock, & dragon", "water, grass, & dragon"));
+            PokedexContents.Add(new Pokemon("Arbok", "large", "purple", "poison", "Kanto", 60, 95, 69, 79, 65, 80, "Intimidate", "grass & fairy", "poison, ground, rock, ghost, & steel"));
+            PokedexContents.Add(new Pokemon("Deerling", "small", "pink & white with yellow accents", "normal & grass", "Unova", 60, 60, 50, 50, 40, 74, "Chlorophyll", "ground, rock, & water", "rock, ghost, steel, flying, poison, bug, fire, grass, & dragon"));
+
             List<ActualPokemon> ChallengerContents = new List<ActualPokemon>();
             ChallengerContents.Add(new Pokemon ("Diglett", "small", "brown", "ground", "Kanto", 10, 55, 25, 45, 35, 95, "Sand Veil", "poison, rock, steel ,fire, & electric", "flying, bug, & grass"));
             ChallengerContents.Add(new Pokemon ("Drowzee", "small", "yellow & brown", "psychic", "Kanto", 60, 48,45, 90, 43, 42, "Insomnia", "fighting & poison", "steel, psychic, & dark"));
@@ -47,6 +59,7 @@ namespace PokedexTest
 //pokedex 1
                 Pokedex foundPokedex = new Pokedex(true);
                 foundPokedex.PokemonsAndStuff = PokedexContents;
+                foundPokedex.TempPokemon = TempPokemon;
 //pokedex 2
                 ChallengerPokedex StrangerPokedex = new ChallengerPokedex(true);
                 StrangerPokedex.Pokemons = ChallengerContents;
@@ -73,38 +86,37 @@ namespace PokedexTest
                                 Console.WriteLine(((Homework)randomPokemonItem).getsCrumbled());
                             }
                             else if (randomPokemonItem is Pokemon) {
-                                Console.WriteLine("You got it boss. Here's one, this is a " + ((Pokemon)randomPokemonItem).name + ". " + ((Pokemon)randomPokemonItem).name + " is " + ((Pokemon)randomPokemonItem).Color + ". They are usually " + ((Pokemon)randomPokemonItem).avgSize + ". " + ((Pokemon)randomPokemonItem).name + " is a " + ((Pokemon)randomPokemonItem).pokemonType + " type and can be found in the " +((Pokemon)randomPokemonItem).region + " Region.");
+                                Console.WriteLine("You got it boss. Here's one, this is a " + ((Pokemon)randomPokemonItem).name + ". " + ((Pokemon)randomPokemonItem).name + " is " + ((Pokemon)randomPokemonItem).Color + ". They are usually " + ((Pokemon)randomPokemonItem).avgSize + ". " + ((Pokemon)randomPokemonItem).name + " is a " + ((Pokemon)randomPokemonItem).pokemonType + " type pokemon and can be found in the " + ((Pokemon)randomPokemonItem).region + " Region.");
                             }
                             Console.WriteLine("Would you like to hear about another pokemon?");
                             userResponse = Console.ReadLine();
                         } while (userResponse == "Yes");
                         Console.WriteLine("Aw okay. Maybe another time then.");
+//else Aw okay maybe another time
 
                         //A stranger approaches
-            Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
+            Console.WriteLine("...A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
             userResponse = Console.ReadLine();
             if (userResponse == "Yes") {
                 do {
                     // { pick randomPokemon }
-                    var randomPokemonItem = foundPokedex.PokemonsAndStuff[rd.Next(0,13)];
-
+                    var randomTempPokemon = foundPokedex.TempPokemon[rd.Next(0,22)];
                     // { pick randomChallenmgerPokemon }
                     var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
-
-                // { display table with both pokemon stats }
-
-                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomPokemonItem).name + Environment.NewLine + "HP: " + ((Pokemon)randomPokemonItem).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomPokemonItem).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomPokemonItem).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomPokemonItem).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomPokemonItem).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomPokemonItem).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomPokemonItem).ability + Environment.NewLine + "Type: " + ((Pokemon)randomPokemonItem).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomPokemonItem).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomPokemonItem).typeWeakness);
+//HEAD                // { display table with both pokemon stats }
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomTempPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomTempPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomTempPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomTempPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomTempPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomTempPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomTempPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomTempPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomTempPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomTempPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomTempPokemon).typeWeakness);
 
                 Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomActualPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomActualPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomActualPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomActualPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomActualPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomActualPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomActualPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomActualPokemon).typeWeakness);
+
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
                  } while (userResponse == "Yes");
+//"The stranger looks disappointed, but they wish you a good day and walk off"
+
             }
             else {Console.WriteLine("The stranger wishes you a good day and walks off.");
             }
-
-            Console.WriteLine("The stranger looks disappointed, but accepts your response...");
                     }
                     else  { 
                         Console.WriteLine("I'm sorry I don't think that's a Pokedex.");
