@@ -86,7 +86,7 @@ namespace PokedexTest
                                 Console.WriteLine(((Homework)randomPokemonItem).getsCrumbled());
                             }
                             else if (randomPokemonItem is Pokemon) {
-                                Console.WriteLine("You got it boss. Here's one, this is a " + ((Pokemon)randomPokemonItem).name + ". " + ((Pokemon)randomPokemonItem).name + " is " + ((Pokemon)randomPokemonItem).Color + ". They are usually " + ((Pokemon)randomPokemonItem).avgSize + ". " + ((Pokemon)randomPokemonItem).name + " is a " + ((Pokemon)randomPokemonItem).pokemonType + " type and can be found in the " +((Pokemon)randomPokemonItem).region + " Region.");
+                                Console.WriteLine("You got it boss. Here's one, this is a " + ((Pokemon)randomPokemonItem).name + ". " + ((Pokemon)randomPokemonItem).name + " is " + ((Pokemon)randomPokemonItem).Color + ". They are usually " + ((Pokemon)randomPokemonItem).avgSize + ". " + ((Pokemon)randomPokemonItem).name + " is a " + ((Pokemon)randomPokemonItem).pokemonType + " type and can be found in the " + ((Pokemon)randomPokemonItem).region + " Region.");
                             }
                             Console.WriteLine("Would you like to hear about another pokemon?");
                             userResponse = Console.ReadLine();
