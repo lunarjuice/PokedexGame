@@ -92,6 +92,7 @@ namespace PokedexTest
                             userResponse = Console.ReadLine();
                         } while (userResponse == "Yes");
                         Console.WriteLine("Aw okay. Maybe another time then.");
+//else Aw okay maybe another time
 
                         //A stranger approaches
             Console.WriteLine("...A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
@@ -113,6 +114,8 @@ namespace PokedexTest
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
                  } while (userResponse == "Yes");
+//"The stranger looks disappointed, but they wish you a good day and walk off"
+
             }
             else {Console.WriteLine("The stranger wishes you a good day and walks off.");
             }
