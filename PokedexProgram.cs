@@ -24,20 +24,20 @@ namespace PokedexTest
             PokedexContents.Add(new Pokemon("Deerling", "small", "pink & white with yellow accents", "normal & grass", "Unova", 60, 60, 50, 50, 40, 74, "Chlorophyll", "ground, rock, & water", "rock, ghost, steel, flying, poison, bug, fire, grass, & dragon")); //stop
 
             List<ActualPokemon> ChallengerContents = new List<ActualPokemon>();
-            ChallengerContents.Add(new Pokemon ("diglett", "small", "brown", "ground", "Kanto", 10, 55, 25, 45, 35, 95, "Sand Veil", "poison, rock, steel ,fire, & electric", "flying, bug, & grass"));
-            ChallengerContents.Add(new Pokemon ("drowzee", "small", "yellow & brown", "psychic", "Kanto", 60, 48,45, 90, 43, 42, "Insomnia", "fighting & poison", "steel, psychic, & dark"));
-            ChallengerContents.Add(new Pokemon ("eevee", "small", "brown", "normal", "Kanto", 55, 55, 50, 65, 45, 55, "Adaptability", "none", "rock, ghost, & steel"));
-            ChallengerContents.Add(new Pokemon ("ekans", "small", "purple & yellow", "poison", "Kanto", 35, 60, 44, 54, 40, 55, "Shed Skin", "grass & fairy", "poison, ground, rock, steel, & ghost"));
-            ChallengerContents.Add(new Pokemon ("fearow", "large", "brown", "normal & flying", "Kanto", 65, 90, 65, 61, 61, 100, "Keen Eye", "fighting, bug, & grass", "rock, steel , & electric"));
-            ChallengerContents.Add(new Pokemon ("tepig","small","orange and red","fire","Unova",65,63,45,45,45,45,"Blaze","Grass, Steel, Bug, and Ice","Ground, Rock, and Water"));
-            ChallengerContents.Add(new Pokemon ("goldeen", "small", "white & orange", "water", "Kanto", 45, 67, 60, 50, 35, 63, "Swift Swim", "ground, rock, & fire", "water, grass, & dragon"));
-            ChallengerContents.Add(new Pokemon ("illumise", "small", "blue, purple, & black", "bug", "Hoenn", 65, 47, 75, 85, 73, 85, "Tinted Lense", "grass, psychic, & dark", "fighting, flying, poison, ghost, steel, fire, & fairy"));
-            ChallengerContents.Add(new Pokemon ("kabuto", "small", "brown", "rock & water", "Kanto", 30, 80, 90, 45, 55, 55, "Battle Armor", "flying, bug, fire, ice, & ground", "fighting, ground, steel, water, grass, & dragon"));
-            ChallengerContents.Add(new Pokemon ("lapras","large","blue","water and ice","Kanto",130,85,80,95,85,60,"Water Absorb","ground, dragon, flying, rock","steel and rock"));
-            ChallengerContents.Add(new Pokemon ("marill","small","blue and white","water and fairy","Johto",70,20,50,50,20,40,"Thick Fat","fire,rock,ground,fighting,dark,dragon","electric, grass, poison"));
-            ChallengerContents.Add(new Pokemon ("snorlax","large","white and blue","normal","Kanto",160,110,65,110,65,30,"Immunity","None","fighting"));
-            ChallengerContents.Add(new Pokemon ("lunatone", "large", "tan", "rock & psychic", "Hoenn", 90, 55, 65, 85, 95, 70, "Levitate", "flying, bug, fire, ice, fighting, & poison", "fighting, ground, steel, psychic, & dark"));
-            ChallengerContents.Add(new Pokemon ("snivy","small","green","grass","Unova",45,45,55,55,45,63,"Overgrow","Ground,Rock, and Water","Bug,Fire,Flying,Ice, Poison"));
+            ChallengerContents.Add(new Pokemon ("Diglett", "small", "brown", "ground", "Kanto", 10, 55, 25, 45, 35, 95, "Sand Veil", "poison, rock, steel ,fire, & electric", "flying, bug, & grass"));
+            ChallengerContents.Add(new Pokemon ("Drowzee", "small", "yellow & brown", "psychic", "Kanto", 60, 48,45, 90, 43, 42, "Insomnia", "fighting & poison", "steel, psychic, & dark"));
+            ChallengerContents.Add(new Pokemon ("Eevee", "small", "brown", "normal", "Kanto", 55, 55, 50, 65, 45, 55, "Adaptability", "none", "rock, ghost, & steel"));
+            ChallengerContents.Add(new Pokemon ("Ekans", "small", "purple & yellow", "poison", "Kanto", 35, 60, 44, 54, 40, 55, "Shed Skin", "grass & fairy", "poison, ground, rock, steel, & ghost"));
+            ChallengerContents.Add(new Pokemon ("Fearow", "large", "brown", "normal & flying", "Kanto", 65, 90, 65, 61, 61, 100, "Keen Eye", "fighting, bug, & grass", "rock, steel , & electric"));
+            ChallengerContents.Add(new Pokemon ("Tepig","small","orange and red","fire","Unova",65,63,45,45,45,45,"Blaze","Grass, Steel, Bug, and Ice","Ground, Rock, and Water"));
+            ChallengerContents.Add(new Pokemon ("Toldeen", "small", "white & orange", "water", "Kanto", 45, 67, 60, 50, 35, 63, "Swift Swim", "ground, rock, & fire", "water, grass, & dragon"));
+            ChallengerContents.Add(new Pokemon ("Illumise", "small", "blue, purple, & black", "bug", "Hoenn", 65, 47, 75, 85, 73, 85, "Tinted Lense", "grass, psychic, & dark", "fighting, flying, poison, ghost, steel, fire, & fairy"));
+            ChallengerContents.Add(new Pokemon ("Kabuto", "small", "brown", "rock & water", "Kanto", 30, 80, 90, 45, 55, 55, "Battle Armor", "flying, bug, fire, ice, & ground", "fighting, ground, steel, water, grass, & dragon"));
+            ChallengerContents.Add(new Pokemon ("Lapras","large","blue","water and ice","Kanto",130,85,80,95,85,60,"Water Absorb","ground, dragon, flying, rock","steel and rock"));
+            ChallengerContents.Add(new Pokemon ("Marill","small","blue and white","water and fairy","Johto",70,20,50,50,20,40,"Thick Fat","fire,rock,ground,fighting,dark,dragon","electric, grass, poison"));
+            ChallengerContents.Add(new Pokemon ("Snorlax","large","white and blue","normal","Kanto",160,110,65,110,65,30,"Immunity","None","fighting"));
+            ChallengerContents.Add(new Pokemon ("Lunatone", "large", "tan", "rock & psychic", "Hoenn", 90, 55, 65, 85, 95, 70, "Levitate", "flying, bug, fire, ice, fighting, & poison", "fighting, ground, steel, psychic, & dark"));
+            ChallengerContents.Add(new Pokemon ("Snivy","small","green","grass","Unova",45,45,55,55,45,63,"Overgrow","Ground,Rock, and Water","Bug,Fire,Flying,Ice, Poison"));
             //add pokemon
           
 
@@ -93,9 +93,9 @@ namespace PokedexTest
 
                 // { display table with both pokemon stats }
 
-                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomPokemonItem).name + Environment.NewLine + "HP: " + ((Pokemon)randomPokemonItem).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomPokemonItem).attack);
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomPokemonItem).name + Environment.NewLine + "HP: " + ((Pokemon)randomPokemonItem).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomPokemonItem).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomPokemonItem).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomPokemonItem).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomPokemonItem).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomPokemonItem).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomPokemonItem).ability + Environment.NewLine + "Type: " + ((Pokemon)randomPokemonItem).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomPokemonItem).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomPokemonItem).typeWeakness);
 
-                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
+                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomActualPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomActualPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomActualPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomActualPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomActualPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomActualPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomActualPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomActualPokemon).typeWeakness);
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
