@@ -6,10 +6,9 @@ namespace PokedexTest
     {
         static void Main(string[] args)
         {
-
+        //(name, avg size, color, type, region, HP, Attack, Defense, Sp.Defense, Sp.Attack, Speed, abilities, type effectiveness, type weakness) //could we change the abilties to be 1/2 abilities since pokemon can hamve more than one abilties. 
             List<PokedexItem> PokedexContents = new List<PokedexItem>();
 
-        //(name, avg size, color, type, region, HP, Attack, Defense, Sp.Defense, Sp.Attack, Speed, abilities, type effectiveness, type weakness) //could we change the abilties to be 1/2 abilities since pokemon can hamve more than one abilties. 
             PokedexContents.Add(new Pokemon("Pidgey", "small and chubby", "brown", "flying & normal", "Kanto & Johto, ", 40, 45, 40, 35, 35, 56, "Keen Eye", "bug and grass","eletcric, ice, and rock"));
             PokedexContents.Add(new Pokemon("Ponyta", "small", "yellow", "fire", " Galar ",50,85,55,65,65,90,"Flash Fire","grass, ice, bug, steel and fairy","water, ground, and rock" ));
             PokedexContents.Add(new Pokemon("Charmander", "small", "orange", "fire", "Kanto", 39,52,43,50,60,62,"Blaze","Grass, Ice, Bug, Steel, Fairy","Water,Ground,Rock"));
@@ -82,7 +81,7 @@ namespace PokedexTest
                         Console.WriteLine("Aw okay. Maybe another time then.");
 
                         //A stranger approaches
-            Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No");
+            Console.WriteLine("A stranger approaches, they ask if you would like to compare pokemon. Would you like to? (Yes or No)");
             userResponse = Console.ReadLine();
             if (userResponse == "Yes") {
                 do {
@@ -93,6 +92,10 @@ namespace PokedexTest
                     var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,14)];
 
                 // { display table with both pokemon stats }
+
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomPokemonItem).name + Environment.NewLine + "HP: " + ((Pokemon)randomPokemonItem).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomPokemonItem).attack);
+
+                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
