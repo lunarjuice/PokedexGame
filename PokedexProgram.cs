@@ -109,12 +109,12 @@ namespace PokedexTest
                     var randomTempPokemon = foundPokedex.TempPokemon[rd.Next(0,9)];
 
                     // { display table with player's pokemon stats }
-                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomTempPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomTempPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomTempPokemon).attack);
+                Console.WriteLine("-- Your Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomTempPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomTempPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomTempPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomTempPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomTempPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomTempPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomTempPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomTempPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomTempPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomTempPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomTempPokemon).typeWeakness);
 
                     var randomActualPokemon = StrangerPokedex.Pokemons[rd.Next(0,13)];
                 
                     // { display table with challenger's pokemon stats }
-                Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack);
+               Console.WriteLine("-- Stranger's Pokemon --" + Environment.NewLine + "Pokemon: " + ((Pokemon)randomActualPokemon).name + Environment.NewLine + "HP: " + ((Pokemon)randomActualPokemon).hp + Environment.NewLine + "Attack: " + ((Pokemon)randomActualPokemon).attack + Environment.NewLine + "Defense: " + ((Pokemon)randomActualPokemon).defense + Environment.NewLine + "spDefense: " + ((Pokemon)randomActualPokemon).spDefense + Environment.NewLine + "spAttack: " + ((Pokemon)randomActualPokemon).spAttack + Environment.NewLine + "Speed: " + ((Pokemon)randomActualPokemon).speed + Environment.NewLine + "Ability: " + ((Pokemon)randomActualPokemon).ability + Environment.NewLine + "Type: " + ((Pokemon)randomActualPokemon).pokemonType + Environment.NewLine + "Effectiveness: " + ((Pokemon)randomActualPokemon).typeEffectiveness + Environment.NewLine + "Weakness: " + ((Pokemon)randomActualPokemon).typeWeakness);
 
                 Console.WriteLine("Would you like to compare another pokemon?");
                 userResponse = Console.ReadLine();
