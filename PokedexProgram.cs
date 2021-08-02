@@ -143,16 +143,6 @@ namespace PokedexTest
 
     }
 }
-
-//To Do List:
-// Done: *Cristian* - add list 2 
-// Done: *Makayla* change pokemon cookie cutter to ActualPokemon 
-// Done: *Makayla* - add object challenger pokedex 
-// Done: *Makayla* - add to states: HP, Attack, Defense, Sp.Defense, Sp.Attack, Speed, abilities, type effectiveness agaisnt other pokemon (effective, notEffective) 
-// Done: *Cristian* - give pokemon in list newly added states 
-// write code for random ch.pokemon
-// write code for random pokmeon
-// write out "text" for stats
+//To Do: 
 // write code for chart with stats (later)
-//
 
