@@ -2,18 +2,18 @@ using System;
 
 public class Pokemon: ActualPokemon {
     //states (name, *color, avg size, type, region, HP, Attack, Defense, Sp.Defense, Sp.Attack, Speed, abilities, type effectiveness)
-    public string name; 
-    public string avgSize; 
-    public string pokemonType; 
-    public string region;
-    public int hp;
-    public int attack;
-    public int defense;
-    public int spDefense;
-    public int spAttack;
-    public int speed;
-    public string typeEffectiveness;
-    public string typeWeakness;
+    private string name; 
+    private string avgSize; 
+    private string pokemonType; 
+    private string region;
+    private int hp;
+    private int attack;
+    private int defense;
+    private int spDefense;
+    private int spAttack;
+    private int speed;
+    private string typeEffectiveness;
+    private string typeWeakness;
 
 
     public Pokemon (string name, string avgSize, string color, string pokemonType, string region, int hp, int attack, int defense, int spDefense, int spAttack, int speed, string ability, string typeEffectiveness, string typeWeakness): base(ability, color) {
