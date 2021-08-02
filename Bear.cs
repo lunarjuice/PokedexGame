@@ -1,4 +1,4 @@
-public class Bear: PokedexItem {
+public class Bear: PokedexItem, IBear {
 
     //states 
     string shape;
@@ -17,7 +17,7 @@ public class Bear: PokedexItem {
 
     //behaviors 
 
-    public bool attacks() {
+    public virtual bool Attacks() {
         if (weight > 200 && scary == true) {
             return true;
         }
@@ -25,7 +25,7 @@ public class Bear: PokedexItem {
     }
 
 
-    public string roll() {
+    public virtual string Roll() {
         if (weight > 150 && shape == "circle") {
             return "This is a bear...it's definitly scary, but not a pokemon. Maybe try again.";
         }

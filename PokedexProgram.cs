@@ -18,6 +18,7 @@ namespace PokedexTest
             PokedexContents.Add(new Pokemon("Mantine", "humongous", "blue & white", "water & flying", "Alola",85,40,70,140,80,70,"Swift Swim","Fire,Ground,Fighting,Rock,Bug,Grass","Electric"));
             PokedexContents.Add(new Plant("green", "fresh", true, true, true, true));
             PokedexContents.Add(new Bear("brown", "circle", 200, true));
+            PokedexContents.Add(new PolarBear("Roar", "white"));
             PokedexContents.Add(new Homework("white","circle" ,20, true));
             PokedexContents.Add(new Pokemon("Squritle", "small", "blue", "water", "Kanto", 44, 48, 65, 64, 50, 43, "Torrent", "ground, rock, & dragon", "water, grass, & dragon"));
             PokedexContents.Add(new Pokemon("Arbok", "large", "purple", "poison", "Kanto", 60, 95, 69, 79, 65, 80, "Intimidate", "grass & fairy", "poison, ground, rock, ghost, & steel"));
@@ -82,7 +83,7 @@ namespace PokedexTest
                                     Console.WriteLine(((Plant)randomPokemonItem).Grows());
                                 }
                                 else if (randomPokemonItem is Bear) {
-                                    Console.WriteLine(((Bear)randomPokemonItem).roll());
+                                    Console.WriteLine(((Bear)randomPokemonItem).Roll());
                                 }
                                 else if (randomPokemonItem is Homework) {
                                     Console.WriteLine(((Homework)randomPokemonItem).getsCrumbled());
